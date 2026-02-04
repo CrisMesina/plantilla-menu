@@ -2,6 +2,7 @@ import React from 'react'
 import { Nav } from '../components/Nav'
 import { useEffect, useState } from 'react'
 import { ListMenu } from '../Menu/ListMenu'
+import { Footer } from './components/Footer'
 
 export const Home = () => {
 
@@ -37,8 +38,8 @@ export const Home = () => {
             </div> 
 
             {/* FOOTER */}
-            <div className='relative bg-zinc-600 h-60'>
-
+            <div className='relative bg-zinc-600 h-auto'>
+                <Footer/>
             </div>
             
         </>
