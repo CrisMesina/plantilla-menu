@@ -44,15 +44,20 @@ export const ListMenu = () => {
                     <h1 className='text-center text-2xl mt-5 mb-10 font-extrabold'>Categorías</h1>
                     <ul className='p-2 flex flex-row md:flex-col overflow-x-auto md:overflow-x-visible flex-nowrap md:flex-wrap'>
                     {menu.map((m , i) =>(
-                        <li key={i} className='shrink-0 md:shrink m-2 text-start border-b border-b-gray-200 p-4 text-black font-bold'>
-                            <input 
-                                type="radio" 
-                                name='categoria'
-                                value={m.label}
-                                checked={selectedCategory === m.label.toUpperCase()}
-                                onChange={(e) =>setSelectedCategory(e.target.value)}
-                            />
-                            <span className='p-2'>{m.label}</span>
+                        <li 
+                            key={i} 
+                            className='shrink-0 md:shrink m-2 text-start border-b border-b-gray-200 p-4 text-black font-bold'
+                            onClick={() => setSelectedCategory(m.label.toUpperCase())}
+                        >
+                            <div >
+                                <input 
+                                    type="radio" 
+                                    name='categoria'
+                                    value={m.label}
+                                    checked={selectedCategory === m.label.toUpperCase()}
+                                />
+                                <span className='p-2'>{m.label}</span>
+                            </div>
                         </li>
                     ))}
                     
