@@ -40,10 +40,11 @@ export const ListMenu = () => {
     return (
         <>
             <div className='flex flex-col md:flex-row'>
-                <ul className='p-2 flex md:flex-col'>
-                    <h1 className='text-center text-2xl mt-5 mb-10 md:block hidden font-extrabold'>Categorías</h1>
+                <div className='w-full md:w-auto'>
+                    <h1 className='text-center text-2xl mt-5 mb-10 font-extrabold'>Categorías</h1>
+                    <ul className='p-2 flex flex-row md:flex-col overflow-x-auto md:overflow-x-visible flex-nowrap md:flex-wrap'>
                     {menu.map((m , i) =>(
-                        <li key={i} className='w-50 m-2 text-start border-b border-b-gray-200 p-4 text-black font-bold'>
+                        <li key={i} className='shrink-0 md:shrink m-2 text-start border-b border-b-gray-200 p-4 text-black font-bold'>
                             <input 
                                 type="radio" 
                                 name='categoria'
@@ -55,7 +56,8 @@ export const ListMenu = () => {
                         </li>
                     ))}
                     
-                </ul>
+                    </ul>
+                </div>
                 <div className='p-2 mx-auto'>
                     <h1 className='text-center text-3xl mx-12 mt-5 mb-10 font-bold'></h1>
                     <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2'>

@@ -1,8 +1,0 @@
-name = "plantilla-mewnu"
-main = "src/App.jsx"
-compatibility_date = "2025-01-01"
-
-
-[assets]
-
-directory = ".dist"
