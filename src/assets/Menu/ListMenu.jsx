@@ -95,7 +95,7 @@ export const ListMenu = () => {
                     </div>
                     <div className='w-full flex justify-center'>
                             {totalPages > 1 && (
-                                <div className='flex border space-x-4 mt-12'>
+                                <div className='flex space-x-4 mt-12'>
                                     <button
                                         onClick={() =>paginate(currentPage -1)}
                                         disabled={currentPage===1}
